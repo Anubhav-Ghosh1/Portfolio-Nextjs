@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: "Anubhav Ghosh - Full Stack Developer",
     description: "Portfolio of Anubhav Ghosh, showcasing web development projects and skills.",
     type: "website",
-    url: "https://anubhav.ghosh.vercel.app",
+    url: "https://anubhavghosh.vercel.app/",
     images: [
       {
         url: "https://media.licdn.com/dms/image/v2/D4D03AQFr8hKX8UZSag/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1709994469261?e=1745452800&v=beta&t=y1UbiNIeLgLxNACz41m8yONaYMi6xeI6rLe-T3w1ZxY", // Change this
