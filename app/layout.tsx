@@ -11,6 +11,7 @@ import Button from "./components/Button";
 import Skills from "./components/Skills";
 import Navbar from "./components/Navbar";
 import "./globals.css";
+import LeetCodeCard from "./components/Leetcode";
 
 export const metadata: Metadata = {
   title: "Anubhav Ghosh - Full Stack Developer",
@@ -45,7 +46,7 @@ export default function RootLayout({
           <div className="overflow-y-auto h-screen [&::-webkit-scrollbar]:hidden md:w-[50%] border border-r-1 rounded-l-lg rounded-r-lg md:rounded-r-none p-4 md:p-10">
             {/* left */}
             <div className="flex flex-col gap-2">
-              <p>anubhavghosh.com</p>
+              <a href="https://anubhavghosh.vercel.app/">https://anubhavghosh.vercel.app/</a>
               <div className="flex items-center gap-2">
                 <p className="text-4xl font-semibold">Anubhav Ghosh</p>
                 <MdVerified className="text-2xl font-semibold" />
@@ -63,7 +64,7 @@ export default function RootLayout({
                 </p>
               </div>
               <div className="flex flex-wrap h-16 items-center gap-2">
-                <Button className="bg-black hover:bg-white hover:text-black transition-all text-white font-medium px-2 py-1 rounded-md">
+                <Button className="bg-black border hover:bg-white hover:text-black transition-all text-white font-medium px-2 py-1 rounded-md">
                   <a href="https://www.youtube.com/@AnubhavGhosh03" target="_blank">
                     Youtube
                   </a>
@@ -101,6 +102,7 @@ export default function RootLayout({
               </div>
             </div>
             <Skills />
+            <LeetCodeCard />
           </div>
           <div className="overflow-y-auto border border-l-2 md:border-l-0 rounded-l-lg md:rounded-l-none rounded-r-lg md:w-[50%] h-screen">
             {/* right */}
