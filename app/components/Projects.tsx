@@ -1,0 +1,93 @@
+"use client";
+import React from "react";
+import Button from "./Button";
+import { FaGithub } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa6";
+import { AiOutlineGlobal } from "react-icons/ai";
+
+function Projects() {
+  let projectData = [
+    {
+      project_title: "Vidtube",
+      date: "October 2024",
+      description: "",
+      tech_stack: ["Reactjs", "TailwindCSS", "Nodejs", "Express", "MongoDB"],
+      github_url: "",
+      live_link: "",
+      youtube_link: "",
+      image: "https://ik.imagekit.io/anubhav11/Screenshot%202025-02-20%20at%2012.01.09%E2%80%AFAM.png?updatedAt=1739989904427",
+      id: 1,
+    },
+    {
+      project_title: "Diner's Find",
+      date: "November 2024",
+      description: "",
+      tech_stack: ["Reactjs", "TailwindCSS", "Nodejs", "Express", "MongoDB"],
+      github_url: "",
+      live_link: "",
+      youtube_link: "",
+      image: "https://ik.imagekit.io/anubhav11/Screenshot%202025-02-20%20at%2012.00.57%E2%80%AFAM.png?updatedAt=1739989905781",
+      id: 2,
+    },
+    {
+        project_title: "Study Notion",
+        date: "October 2024",
+        description: "",
+        tech_stack: ["Reactjs", "TailwindCSS", "Nodejs", "Express", "MongoDB"],
+        github_url: "",
+        live_link: "",
+        youtube_link: "",
+        image: "https://ik.imagekit.io/anubhav11/Screenshot%202025-02-20%20at%2012.01.09%E2%80%AFAM.png?updatedAt=1739989904427",
+        id: 3,
+      },
+  ];
+  return (
+    <div className="w-full flex flex-col gap-5 p-10">
+      {projectData &&
+        projectData.map((data) => {
+          return (
+            <div key={data.id} className="flex w-full h-48 rounded-lg p-5 border border-b-4">
+              <div className="flex flex-col gap-2">
+                <div className="flex gap-2 w-fit">
+                  <p className="font-semibold">{data.project_title}</p>
+                  <div className="bg-gray-100 text-xs px-1 py-1 rounded">
+                    <p>{data.date}</p>
+                  </div>
+                </div>
+                <p></p>
+                <div className="flex flex-wrap gap-2">
+                  {data.tech_stack.map((tech,index) => {
+                    return (
+                      <div key={index} className="bg-gray-100 text-xs w-fit text-black rounded px-1 py-1">
+                        {tech}
+                      </div>
+                    );
+                  })}
+                </div>
+                <div className="flex gap-2 mt-2">
+                  <Button className="border h-fit font-medium px-2 py-2 rounded-md">
+                    <a href={data.github_url} target="_blank">
+                      <FaGithub />
+                    </a>
+                  </Button>
+                  <Button className="border h-fit font-medium px-2 py-2 rounded-md">
+                    <a href={data.youtube_link} target="_blank">
+                      <FaYoutube />
+                    </a>
+                  </Button>
+                  <Button className="border h-fit font-medium px-2 py-2 rounded-md">
+                    <a href={data.live_link} target="_blank">
+                      <AiOutlineGlobal />
+                    </a>
+                  </Button>
+                </div>
+              </div>
+              <div className=""><img className="h-32 rounded-lg" src={data.image} alt="" /></div>
+            </div>
+          );
+        })}
+    </div>
+  );
+}
+
+export default Projects;

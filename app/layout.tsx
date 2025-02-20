@@ -1,6 +1,21 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { MdVerified } from "react-icons/md";
+import { IoCodeSlash } from "react-icons/io5";
+import { SiApplemusic } from "react-icons/si";
+import { FaGithub } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
+import { MdMailOutline } from "react-icons/md";
+import { IoLogoTwitter } from "react-icons/io5";
+import Button from "./components/Button";
+import Skills from "./components/Skills";
+import { MdDarkMode, MdLightMode } from "react-icons/md"; // Import Icons
+import DarkModeToggle from "./components/DarkModeToggle";
+import Navbar from "./components/Navbar";
 import "./globals.css";
+import AppProvider from "./components/Provider";
+import useDarkMode from "./components/useDarkMode";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,10 +39,61 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className="bg-white">
+        <div className="flex md:flex-row flex-col p-2 md:p-10 text-black w-screen justify-between">
+          <div className="overflow-y-auto h-screen [&::-webkit-scrollbar]:hidden md:w-[50%] border border-r-1 rounded-l-lg p-10">
+            {/* left */}
+            <div className="flex flex-col gap-2">
+              <p>anubhavghosh.com</p>
+              <div className="flex items-center gap-2">
+                <p className="text-4xl font-semibold">Anubhav Ghosh</p>
+                <MdVerified className="text-2xl font-semibold" />
+              </div>
+              <div className="flex items-center gap-2">
+                <p className="text-lg">Currently coding</p>
+                <IoCodeSlash className="text-lg" />
+                <p className="text-lg">with</p>
+                <SiApplemusic className="text-lg" />
+              </div>
+              <div>
+                <p>
+                  Hey 👋 Anubhav here! I am a student and Intern at Juspay. I
+                  build full stack web applications
+                </p>
+              </div>
+              <div className="flex h-16 items-center gap-2">
+                <Button className="bg-black hover:bg-white hover:text-black transition-all text-white font-medium px-2 py-1 rounded-md">
+                  Youtube
+                </Button>
+                <Button className="border font-medium px-2 py-1 rounded-md">
+                  Resume
+                </Button>
+                <Button className="border font-medium px-2 py-2 rounded-md">
+                  <FaGithub />
+                </Button>
+                <Button className="border font-medium px-2 py-2 rounded-md">
+                  <FaYoutube />
+                </Button>
+                <Button className="border font-medium px-2 py-2 rounded-md">
+                  <FaLinkedin />
+                </Button>
+                <Button className="border font-medium px-2 py-2 rounded-md">
+                  <MdMailOutline />
+                </Button>
+                <Button className="border font-medium px-2 py-2 rounded-md">
+                  <IoLogoTwitter />
+                </Button>
+              </div>
+            </div>
+            <Skills />
+          </div>
+          <div className="overflow-y-auto border border-l-0 rounded-r-lg w-[50%] h-screen">
+            {/* right */}
+            <Navbar />
+
+            {children}
+          </div>
+        </div>
       </body>
     </html>
   );
