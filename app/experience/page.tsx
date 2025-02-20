@@ -2,11 +2,11 @@
 import React from "react";
 
 function Experience() {
-  let expericenData = [
+const expericenData = [
     {
-      company: "Vidtube",
+      company: "Juspay",
       date: "December 2024",
-      description: ["Hello"],
+      description: ["Working with Rescript and Python"],
       role: "Software Development Engineer",
       tech_stack: ["Reactjs", "TailwindCSS", "Python", "Rescript", "FastAPI"],
       id: 1,
@@ -18,7 +18,7 @@ function Experience() {
         expericenData.map((data) => {
           return (
             <div key={data.id}>
-              <div className="flex justify-between">
+              <div className="flex flex-col md:flex-row justify-between">
               <div className="flex items-center gap-2">
                 <div className="text-xl font-semibold">{data.company}</div>
                 <div className="bg-gray-100 w-fit text-xs px-1 py-1 rounded">

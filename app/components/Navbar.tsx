@@ -7,7 +7,7 @@ export default function Navbar() {
   const [activeTab, setActiveTab] = useState("/");
 
   return (
-    <div className="flex w-full justify-center  pt-4 bg-white rounded-lg overflow-hidden">
+    <div className="flex w-full justify-center pt-4 bg-white rounded-lg overflow-hidden">
       {[
         { name: "Projects", path: "/", id:1 },
         { name: "Experience", path: "/experience", id:2 },

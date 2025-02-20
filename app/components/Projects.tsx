@@ -6,7 +6,7 @@ import { FaYoutube } from "react-icons/fa6";
 import { AiOutlineGlobal } from "react-icons/ai";
 
 function Projects() {
-  let projectData = [
+  const projectData = [
     {
       project_title: "Vidtube",
       date: "October 2024",
@@ -15,7 +15,7 @@ function Projects() {
       github_url: "",
       live_link: "",
       youtube_link: "",
-      image: "https://ik.imagekit.io/anubhav11/Screenshot%202025-02-20%20at%2012.01.09%E2%80%AFAM.png?updatedAt=1739989904427",
+      image: "https://res.cloudinary.com/dzg7eemfm/image/upload/v1740071714/rpehfykjg1rvlblreg8h.png",
       id: 1,
     },
     {
@@ -26,7 +26,7 @@ function Projects() {
       github_url: "",
       live_link: "",
       youtube_link: "",
-      image: "https://ik.imagekit.io/anubhav11/Screenshot%202025-02-20%20at%2012.00.57%E2%80%AFAM.png?updatedAt=1739989905781",
+      image: "https://res.cloudinary.com/dzg7eemfm/image/upload/v1740071714/qtq8dsdw3dp9m8onykge.png",
       id: 2,
     },
     {
@@ -37,16 +37,16 @@ function Projects() {
         github_url: "",
         live_link: "",
         youtube_link: "",
-        image: "https://ik.imagekit.io/anubhav11/Screenshot%202025-02-20%20at%2012.01.09%E2%80%AFAM.png?updatedAt=1739989904427",
+        image: "https://res.cloudinary.com/dzg7eemfm/image/upload/v1740071714/vhzbojfri4sptnwuh8wa.png",
         id: 3,
       },
   ];
   return (
-    <div className="w-full flex flex-col gap-5 p-10">
+    <div className="w-full flex flex-col gap-5 p-5 md:p-10">
       {projectData &&
         projectData.map((data) => {
           return (
-            <div key={data.id} className="flex w-full h-48 rounded-lg p-5 border border-b-4">
+            <div key={data.id} className="flex md:flex-row flex-col w-full md:h-48 gap-4 md:gap-0 rounded-lg p-5 border border-b-4">
               <div className="flex flex-col gap-2">
                 <div className="flex gap-2 w-fit">
                   <p className="font-semibold">{data.project_title}</p>
@@ -54,7 +54,6 @@ function Projects() {
                     <p>{data.date}</p>
                   </div>
                 </div>
-                <p></p>
                 <div className="flex flex-wrap gap-2">
                   {data.tech_stack.map((tech,index) => {
                     return (
@@ -82,7 +81,7 @@ function Projects() {
                   </Button>
                 </div>
               </div>
-              <div className=""><img className="h-32 rounded-lg" src={data.image} alt="" /></div>
+              <div><img className="h-32 rounded-lg" src={data.image} alt={data.project_title} /></div>
             </div>
           );
         })}
