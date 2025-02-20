@@ -4,6 +4,7 @@ import Button from "./Button";
 import { FaGithub } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa6";
 import { AiOutlineGlobal } from "react-icons/ai";
+import Image from "next/image";
 
 function Projects() {
   const projectData = [
@@ -81,7 +82,7 @@ function Projects() {
                   </Button>
                 </div>
               </div>
-              <div><img className="h-32 rounded-lg" src={data.image} alt={data.project_title} /></div>
+              <div><Image className="h-32 rounded-lg" src={data.image} alt={data.project_title} /></div>
             </div>
           );
         })}

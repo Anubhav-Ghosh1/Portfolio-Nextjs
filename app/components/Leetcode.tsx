@@ -41,12 +41,11 @@ const LeetCodeCard = () => {
   // Define custom plugin to display text in the center
   const centerTextPlugin = {
     id: "centerText",
-    beforeDraw: (chart: any) => {
+    beforeDraw: (chart: ChartJS) => {
       const { width } = chart;
       const { height } = chart;
       const ctx = chart.ctx;
       ctx.restore();
-      const fontSize = (height / 100).toFixed(2);
       ctx.font = `12px sans-serif`;
       ctx.textBaseline = "middle";
       ctx.textAlign = "center";
