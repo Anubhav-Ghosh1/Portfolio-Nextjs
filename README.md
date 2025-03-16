@@ -1,3 +1,5 @@
+![Portfolio-Nextjs](https://socialify.git.ci/Anubhav-Ghosh1/Portfolio-Nextjs/image?language=1&name=1&owner=1&stargazers=1&theme=Dark)
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
